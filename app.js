@@ -1,6 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
+
+const userRouter = require("./routes/user");
 require("dotenv").config();
 
 mongoose
@@ -12,9 +14,7 @@ mongoose
     .then(() => console.log("Ok"))
     .catch((err) => console.log("Erro", err));
 
-app.get("/", (req, res) => {
-    res.send("Hello word from node strey");
-});
+app.use("/api", userRouter);
 
 const port = process.env.PORT || 8000;
 

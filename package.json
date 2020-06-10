@@ -11,9 +11,11 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "crypto": "^1.0.1",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "mongoose": "^5.9.18",
-        "nodemon": "^2.0.4"
+        "nodemon": "^2.0.4",
+        "uuidv1": "^1.6.14"
     }
 }
